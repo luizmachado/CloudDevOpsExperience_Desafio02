@@ -3,6 +3,11 @@
 # Definir URL da aplicação
 URL="https://github.com/denilsonbonatti/linux-site-dio/archive/refs/heads/main.zip"
 
+# Configurar needrestart daemon para auto
+#e evitar interrupção do script após instalações
+cp /etc/needrestart/needrestart.conf /etc/needrestart/needrestart.conf.bkp
+sed -i 's/#$nrconf{restart} = \x27i\x27/$nrconf{restart} = \x27a\x27/g' /etc/needrestart/needrestart.conf
+
 # Atualizar servidor
 apt update && apt upgrade -y
 
