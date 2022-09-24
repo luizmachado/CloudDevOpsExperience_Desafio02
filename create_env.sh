@@ -24,7 +24,7 @@ wget $URL -P /tmp/
 unzip /tmp/main.zip -d /tmp/
 
 #Copiar arquivos da aplicação para root do Apache
-cp -r /tmp/linux-site-dio-main/ /var/www/html/
+cp -r /tmp/linux-site-dio-main/* /var/www/html/
 
 #Habilitar e inicializar serviço do Apache
 systemctl enable apache2 && systemctl restart apache2
