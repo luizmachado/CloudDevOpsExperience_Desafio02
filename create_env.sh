@@ -16,7 +16,7 @@ apt install unzip -y
 wget $URL -P /tmp/
 
 # Extrair arquivos
-unzip /tmp/main.zip
+unzip /tmp/main.zip -d /tmp/
 
 #Copiar arquivos da aplicação para root do Apache
 cp -r /tmp/linux-site-dio/ /var/www/html/
